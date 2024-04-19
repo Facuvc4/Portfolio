@@ -10,39 +10,66 @@ import Npm from './icons/Npm.astro'
 import VS from './icons/VS.astro'
 import WordPress from './icons/WordPress.astro'
 ---
-
-<div class="flex flex-wrap">
-    <div class="flex w-full mb-16">
-        <div class="w-1/2">
-        <h3 class="text-center">Front-End</h3>
-        <div class="flex items-center justify-center">
-            <HTML class="size-12 m-7"></HTML>
-            <CSS class="size-12 m-7"></CSS>
-            <JS class="size-12 m-7"></JS>
-        </div>
-        </div>
-        <div class="w-1/2">
-        <h3 class="text-center">Back-End</h3>
-        <div class="flex items-center justify-center">
-            <Node class="size-12 m-7"></Node>
-        </div>
-    </div>
-    </div>
-    <div class="flex w-full">
-        <div class="w-1/2">
-            <h3 class="text-center">Aprendiendo</h3>
-            <div class="flex items-center justify-center">
-                <WordPress class="size-12 m-7"></WordPress>
-            </div>
-            </div>
-            <div class="w-1/2">
-            <h3 class="text-center">Herramientas</h3>
-            <div class="flex flex-wrap items-center justify-center">
-                <VS class="size-12 m-7"></VS>
-                <Npm class="size-12 m-7"></Npm>
-                <Bun class="size-12 m-7"></Bun>
-                <Asstro class="size-12 m-7"></Asstro>
-                <GitHub class="size-12 m-7"></GitHub>
-            </div>
-    </div>
-</div>
+<p class="text-lg mb-12">En mi viaje por el mundo del desarrollo web, he cultivado experiencia y habilidades en una variedad de tecnologías. <span class="text-blue-400">Mi stack tecnológico incluye:</span></p>
+<section class="grid lg:grid-cols-2 lg:grid-rows-2 gap-8">
+    <article class="mb-12">
+        <h3 class="text-center text-2xl font-semibold mb-8">Front-End</h3>
+        <ul class="grid grid-cols-3 gap-7">
+            <li class="flex flex-col justify-center items-center">
+                <HTML class="size-12 mb-1" />
+                <span>HTML</span>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <CSS class="size-12 mb-1" />
+                <span>CSS</span>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <JS class="size-12 mb-1" />
+                <span>JavaScript</span>
+            </li>
+        </ul>
+    </article>
+    <article class="mb-12">
+        <h3 class="text-center text-2xl font-semibold mb-8">Back-End</h3>
+        <ul class="grid grid-cols-3 gap-7">
+            <li class="flex flex-col justify-center items-center">
+                <Node class="size-12 mb-1" />
+                <span>NodeJS</span>
+            </li>
+        </ul>
+    </article>
+    <article class="mb-12">
+        <h3 class="text-center text-2xl font-semibold mb-8">Aprendiendo</h3>
+        <ul class="grid grid-cols-3 gap-7">
+            <li class="flex flex-col justify-center items-center">
+                <WordPress class="size-12 mb-1" />
+                <span>WordPress</span>
+            </li>
+        </ul>
+    </article>
+    <article class="mb-12">
+        <h3 class="text-center text-2xl font-semibold mb-8">Herramientas</h3>
+        <ul class="grid grid-cols-3 gap-7">
+            <li class="flex flex-col justify-center items-center">
+                <Npm class="size-12 mb-1" />
+                <span>npm</span>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <Bun class="size-12 mb-1" />
+                <span>Bun</span>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <VS class="size-12 mb-1" />
+                <span>VSCode</span>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <GitHub class="size-12 mb-1" />
+                <span>GitHub</span>
+            </li>
+            <li class="flex flex-col justify-center items-center">
+                <Asstro class="size-12 mb-1" />
+                <span>Astro</span>
+            </li>
+        </ul>
+    </article>
+</section>

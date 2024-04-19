@@ -12,6 +12,7 @@ import User from '../components/icons/User.astro'
 import AboutMe from '../components/AboutMe.astro';
 import Laptop from '../components/icons/Laptop.astro';
 import Stack from '../components/Stack.astro'
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Portfolio | Facundo | Desarrollador y Programador Web"
@@ -20,13 +21,13 @@ description="Facundo López - Desarrollador Back-End especializado en la creaci�
 	<main class="px-4">
 		<SectionContainer class="mt-40 lg:mb-[230px]" id="top">
 			<img class="rounded-full size-40 mb-4" src="/src/images/yo.jpg" alt="Foto de Facu">
-		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-3 pb-4 lg:pb-6">
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-x-3 pb-4 lg:pb-6">
 			Hola, soy Facundo 
-			<a href="https://www.linkedin.com/in/facundolopezz/" target="_blank" rel="noopener" class="flex justify-center items-center">
-				<Badges>Disponible para trabajar</Badges>
+			<a href="https://www.linkedin.com/in/facundolopezz/" target="_blank" rel="noopener" class="flex mt-5 lg:mt-1 lg:pl-2">
+				<Badges></Badges>
 			</a>
 		</h1>
-		<h2 class=" text-xl lg:text-2xl max-w-[700px] text-wrap">+15 años de experiencia.<span class="text-violet-200/90"> Desarrollador Web y Creador de Contenido</span><span class="text-blue-300/90"> de Mendoza, Argentina</span>. 
+		<h2 class=" text-xl lg:text-2xl max-w-[700px] text-wrap">Proximo Ingeniero en Sistemas.<span class="text-violet-200/90"> Desarrollador Web</span><span class="text-blue-300/90"> de Mendoza, Argentina</span>. 
 			<span class="opacity-75">Especializado en crear soluciones unicas</span>
 		</h2>
 
@@ -52,18 +53,19 @@ description="Facundo López - Desarrollador Back-End especializado en la creaci�
 		</SectionContainer>
 
 		<SectionContainer  id="sobre-mi">
-			<h2 class="text-3xl font-semiboldmb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<User class="size-10" />
 				Sobre mí
 			</h2>
 			<AboutMe />
 		</SectionContainer>
-		<SectionContainer  id="sobre-mi">
-			<h2 class="mb-6 text-3xl font-semiboldmb-6 flex gap-x-3 items-center">
+		<SectionContainer class="mb-12"  id="sobre-mi">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Laptop class="size-10" />
 				Tecnologías
 			</h2>
 			<Stack />
 		</SectionContainer>
 	</main>
+	<Footer />
 </Layout>
