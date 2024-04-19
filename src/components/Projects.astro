@@ -1,0 +1,68 @@
+---
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import JS from "./icons/JS.astro"
+import SocialPill from "./SocialPill.astro"
+import GitHub from "./icons/GitHub.astro"
+import LinkWeb from "./icons/LinkWeb.astro"
+
+const TAGS = {
+    HTML : {
+        name: 'HTML5',
+        class : "bg-black text-white",
+        icon: HTML
+    },
+
+    CSSS : {
+        name: 'CSS3',
+        class : "bg-black text-white",
+        icon: CSS
+        },
+
+    JAVASCRIPT : {
+        name: 'JavaScript',
+        class : "bg-black text-white",
+        icon: JS
+    }
+}
+
+
+const PROJECTS = [ {
+    title: 'Vinos Maywa',
+    description: 'Este es la primera pagina que hice en base a una marca de vino mendocina. Es una pagina generica que podria utilizarse como plantilla, es responsive y adaptable a cualquier dispositivo',
+    link:'https://maywa.netlify.app/',
+    github: 'https://github.com/Facuvc4/Proyecto-Maywa/tree/main/imagenes/Slider',
+    image: '/projects/project-maywa.webp',
+    tags:[TAGS.HTML,TAGS.CSSS,TAGS.JAVASCRIPT],
+}
+]
+---
+
+{
+    PROJECTS.map(project =>(
+        <article>
+        <h3 class="text-2xl font-semibold text-blue-400 mb-2">{project.title}</h3>
+        <p class="text-lg mb-4 text-pretty">{project.description}</p>
+        <ul class="flex gap-x-4 flex-row mb-2">
+            {project.tags.map(tag => (
+                <li>
+                    <span class={`flex gap-x-2 rounded-full text-s ${tag.class} py-2 px-1`}>
+                        <tag.icon class="size-5" />
+                        {tag.name}
+                    </span>
+                </li>
+            ) )}
+        </ul>
+        <img src={project.image} alt={`Captura de pantalla del proyecto ${project.title}`}>
+        <footer class="flex gap-x-4 mt-3">
+        <SocialPill href={project.github}>
+        <GitHub class="size-4 lg:size-6" />Código Fuente
+        </SocialPill>    
+        <SocialPill href={project.link}>
+        <LinkWeb class="size-4 lg:size-6" />Pagina Web
+        </SocialPill>    
+        </footer>
+        </article>
+    )
+    )
+}
