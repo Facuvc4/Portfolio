@@ -5,6 +5,9 @@ import JS from "./icons/JS.astro"
 import SocialPill from "./SocialPill.astro"
 import GitHub from "./icons/GitHub.astro"
 import LinkWeb from "./icons/LinkWeb.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Asstro from "./icons/Asstro.astro"
+import Node from "./icons/Node.astro"
 
 const TAGS = {
     HTML : {
@@ -23,6 +26,24 @@ const TAGS = {
         name: 'JavaScript',
         class : "bg-black text-white",
         icon: JS
+    },
+
+    Tailwind : {
+        name: 'Tailwind',
+        class : "bg-black text-white",
+        icon: Tailwind
+    },
+
+    Astro : {
+        name: 'Astro',
+        class : "bg-black text-white",
+        icon: Asstro
+    },
+
+    Node : {
+        name: 'Node.JS',
+        class : "bg-black text-white",
+        icon: Node
     }
 }
 
@@ -31,16 +52,24 @@ const PROJECTS = [ {
     title: 'Vinos Maywa',
     description: 'Este es la primera pagina que hice en base a una marca de vino mendocina. Es una pagina generica que podria utilizarse como plantilla, es responsive y adaptable a cualquier dispositivo',
     link:'https://maywa.netlify.app/',
-    github: 'https://github.com/Facuvc4/Proyecto-Maywa/tree/main/imagenes/Slider',
+    github: 'https://github.com/Facuvc4/Proyecto-Maywa',
     image: '/projects/project-maywa.webp',
     tags:[TAGS.HTML,TAGS.CSSS,TAGS.JAVASCRIPT],
+},
+{
+    title: 'Ben 10 Api',
+    description: 'Esta es mi primera Api creada con nodeJS y astro, donde se puestran todos los personajes de ben 10 de la serie original, para conseguir el json de los personajes solo hay que colocar /data/characters.json en la ruta',
+    link:'https://benapi.up.railway.app/',
+    github: 'https://github.com/Facuvc4/benApi',
+    image: '/projects/project-benapi.webp',
+    tags:[TAGS.Astro,TAGS.Tailwind,TAGS.Node],
 }
 ]
 ---
 
 {
     PROJECTS.map(project =>(
-        <article>
+        <article class="mb-20">
         <h3 class="text-2xl font-semibold text-blue-400 mb-2">{project.title}</h3>
         <p class="text-lg mb-4 text-pretty">{project.description}</p>
         <ul class="flex gap-x-4 flex-row mb-2">
